@@ -31,10 +31,10 @@ export class HeartController {
     @Query('start') start?: string,
     @Query('end') end?: string,
   ) {
-    const s = start ? new Date(start) : undefined;
-    const e = end ? new Date(end) : undefined;
+    const startDate = start ? new Date(start) : undefined;
+    const endDate = end ? new Date(end) : undefined;
 
-    return this.service.findInRange(patientId, s, e);
+    return this.service.findInRange(patientId, startDate, endDate);
   }
 
   // get all readings with heart rate above 100 bpm, for all patients
