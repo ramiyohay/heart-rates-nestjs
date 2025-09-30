@@ -4,6 +4,10 @@ This is a NestJS backend service for managing patients and their heart rate read
 
 ---
 
+## Running the project
+1. run "npm install"
+2. start the project "npm run start:dev"
+
 ## Features
 
 1. **Patients**
