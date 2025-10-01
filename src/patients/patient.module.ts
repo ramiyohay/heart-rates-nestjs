@@ -6,7 +6,7 @@ import { PatientController } from './patient.controller';
 import { RequestCount } from '../shared/request-count.entity';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([Patient, RequestCount])],
+  imports: [TypeOrmModule.forFeature([Patient, RequestCount])], // gain access to Patient and RequestCount repositories
   providers: [PatientService],
   controllers: [PatientController],
   exports: [PatientService],
