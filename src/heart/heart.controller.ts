@@ -1,6 +1,7 @@
 import { Controller, Get, Param, Query, Post, Body } from '@nestjs/common';
 import { HeartService } from './heart.service';
 import { CreateHeartDto } from './dto/create-heart.dto';
+import { validateDateRange } from '../shared/date-validation';
 
 @Controller('heart-readings')
 export class HeartController {
@@ -31,8 +32,7 @@ export class HeartController {
     @Query('start') start?: string,
     @Query('end') end?: string,
   ) {
-    const startDate = start ? new Date(start) : undefined;
-    const endDate = end ? new Date(end) : undefined;
+    const { startDate, endDate } = validateDateRange(start, end);
 
     return this.service.findInRange(patientId, startDate, endDate);
   }

@@ -6,7 +6,7 @@ import { HeartModule } from '../heart/heart.module';
 import { HeartReading } from '../heart/heart.entity';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([HeartReading]), HeartModule],
+  imports: [TypeOrmModule.forFeature([HeartReading]), HeartModule], // gain access to HeartReading repository
   providers: [AnalyticsService],
   controllers: [AnalyticsController],
 })

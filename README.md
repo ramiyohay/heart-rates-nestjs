@@ -63,7 +63,7 @@ This is a NestJS backend service for managing patients and their heart rate read
 ## Database & Seed
 
 - Uses SQLite (`data.sqlite`)
-- Automatically loads `patients.json` on startup
+- Automatically loads `patients.json` on startup into the SQLite DB
 
 ## Potential Improvements
 
@@ -75,7 +75,7 @@ This is a NestJS backend service for managing patients and their heart rate read
    - Add test coverage for services, controllers, and middleware
 
 3. **Data encryption**
-    - Sensitive data needs to be encrypted in the db, using MD5 or HASH
+    - Sensitive data needs to be encrypted in the db, using MD5 , HASH , BCrypt or any other encryption method
 
 4. **Database Optimization**
-   - Columns indexing
+   - Columns indexing for faster data fetching
